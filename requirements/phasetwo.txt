@@ -1,0 +1,8 @@
+# These libs import turbogears in their setup.py,
+# so TurboGears must be fully installed before these
+# are installed at all.  So we need to install them
+# in a second phase, after installing TurboGears and
+# its own dependencies.
+
+requirements/src/TurboTinyMCE-1.0.6.tar.gz
+requirements/src/Select_Shuttle-1.2.tar.gz

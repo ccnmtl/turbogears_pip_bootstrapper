@@ -12,5 +12,4 @@ if os.path.exists(vedir):
 
 subprocess.call(["python2.5",os.path.join(pwd,"pip.py"),"install",
                  "-E", vedir,
-                 "--enable-site-packages",
                  "--requirement",os.path.join(pwd,"requirements/apps.txt")])

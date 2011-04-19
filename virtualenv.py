@@ -465,7 +465,7 @@ def _install_req(py_executable, unzip=False, distribute=False,
         search_dirs = file_search_dirs()
 
     if not distribute:
-        setup_fn = 'setuptools-0.6c11-py%s.egg' % sys.version[:3]
+        setup_fn = 'setuptools-0.6c8-py%s.egg' % sys.version[:3]
         project_name = 'setuptools'
         bootstrap_script = EZ_SETUP_PY
         source = None

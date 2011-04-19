@@ -18,6 +18,13 @@ ret = subprocess.call(["python2.5", "virtualenv.py",
                        vedir])
 if ret: exit(ret)
 
+# Let's also bake in an assertion that setuptools 0.6c8 is the installed and active version,
+# to be extra safe, and to be a little bit self-documenting
+ret = subprocess.call([os.path.join(vedir, 'bin', 'python2.5'),
+                       "-c",
+                       "import pkg_resources as pkr; assert pkr.get_distribution('setuptools').version=='0.6c8'"])
+if ret: exit(ret)
+    
 ret = subprocess.call([os.path.join(vedir, 'bin', 'pip'), "install",
                        "-E", vedir,
                        "--enable-site-packages",

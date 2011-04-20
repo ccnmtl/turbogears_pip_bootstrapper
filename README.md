@@ -1,14 +1,21 @@
-This is a demonstration of how to install TurboGears 1.0 projects with
+This is a demonstration of how to install TurboGears 1.0.4 projects with
 pip and virtualenv, using no network access for any dependences, which
 are all included in local fully-pinned source distributions. 
 
-It expects to be dropped into an existing TG project, and then you can
-run `bootstrap.py` to install the project.  You might need to add
-additional dependencies for your project in `requirements/`.
+You can clone this repo and run `bootstrap.py` to create a virtualenv
+in `./ve` which can be used to run your TurboGears 1.0.4 project.
+(Like `./ve/bin/python /path/to/my/project/start-myproject.py` for
+example.) You might need to add additional dependencies for your
+project in `requirements/` -- this contains all the core requirements
+for a TurboGears 1.0.4 project.  (It also contains a few extra
+requirements, so you may also want to prune some out, but it's
+probably not really worth the bother.)
 
 Features
 --------
 
+* Full containment in a virtualenv.
+* Uses virtualenv 1.7-dev, pip 1.0
 * No downloading anything, ever.
 * Setuptools 0.6c8 is guaranteed to be installed; this is necessary
   for the version of TG my projects are developed against, because of

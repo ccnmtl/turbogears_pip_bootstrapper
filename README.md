@@ -14,9 +14,9 @@ probably not really worth the bother.)
 You can also use it to create new TurboGears 1.0.4 projects if you're
 into that, e.g.:
 
-  ./bootstrap.py
-  ./ve/bin/tg-admin quickstart newproject
-  ./newproject/start-newproject.py  # will have its shebang set to ../ve/bin/python
+    ./bootstrap.py
+    ./ve/bin/tg-admin quickstart newproject
+    ./newproject/start-newproject.py  # will have its shebang set to ../ve/bin/python
 
 And then you can distribute the bootstrapper along with your project
 so that it can be reliably rebuilt on other machines.

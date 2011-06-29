@@ -14,6 +14,7 @@ virtualenv_support_dir = os.path.abspath(os.path.join(pwd, "requirements", "virt
 
 ret = subprocess.call(["python2.5", "virtualenv.py", 
                        "--extra-search-dir=%s" % virtualenv_support_dir,
+                       "--no-site-packages",
                        "--never-download",
                        vedir])
 if ret: exit(ret)
@@ -27,14 +28,14 @@ if ret: exit(ret)
     
 ret = subprocess.call([os.path.join(vedir, 'bin', 'pip'), "install",
                        "-E", vedir,
-                       "--enable-site-packages",
+#                       "--enable-site-packages",
                        "--index-url=''",
                        "--requirement",os.path.join(pwd,"requirements/apps.txt")])
 if ret: exit(ret)
 
 ret = subprocess.call([os.path.join(vedir, 'bin', 'pip'), "install",
                        "-E", vedir,
-                       "--enable-site-packages",
+#                       "--enable-site-packages",
                        "--index-url=''",
                        "--requirement",os.path.join(pwd,"requirements/phasetwo.txt")])
 if ret: exit(ret)
